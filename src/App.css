@@ -1,0 +1,52 @@
+@font-face {
+  font-family: 'SF Distant Galaxy Regular';
+  src: url('/src/assets/fonts/DISTGRG_-webfont.eot');
+  src: url('/src/assets/fonts/DISTGRG_-webfont.eot?#iefix') format('embedded-opentype'),
+    url('/src/assets/fonts/DISTGRG_-webfont.woff2') format('woff2'),
+    url('/src/assets/fonts/DISTGRG_-webfont.woff') format('woff'),
+    url('/src/assets/fonts/DISTGRG_-webfont.ttf') format('truetype'),
+    url('/assets/fonts/DISTGRG_-webfont.svg#distant_galaxyregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Distant Galaxy Italic';
+  src: url('/src/assets/fonts/sfdistantgalaxyitalic-wv3y-webfont.woff2') format('woff2'),
+       url('/src/assets/fonts/sfdistantgalaxyitalic-wv3y-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'SF Distant Galaxy Long';
+  src: url('/src/assets/fonts/sfdistantgalaxyalternate-oe4d-webfont.woff2') format('woff2'),
+       url('/src/assets/fonts/sfdistantgalaxyalternate-oe4d-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Distant Galaxy Long Outline Italic';
+  src: url('/src/assets/fonts/sfdistantgalaxyaltoutlineitalic-zjdz-webfont.woff2') format('woff2'),
+       url('/src/assets/fonts/sfdistantgalaxyaltoutlineitalic-zjdz-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF Distant Galaxy Long Italic';
+  src: url('/src/assets/fonts/sfdistantgalaxyalternateitalic-3rdm-webfont.woff2') format('woff2'),
+       url('/src/assets/fonts/sfdistantgalaxyalternateitalic-3rdm-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+#root {
+  font-family: 'SF Distant Galaxy Regular';
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}

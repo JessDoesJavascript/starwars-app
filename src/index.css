@@ -1,0 +1,11 @@
+
+:root {
+  font-family: 'SF Distant Galaxy Regular';
+  --clr-black: #000;
+  --clr-space: #111;
+  --clr-white: #e9e9e9;
+  --clr-yoda: #749c54;
+  --clr-yellow: #FFE81F;
+  --clr-beige: #d5ceb2;
+  background-color: var(--clr-black);
+}
