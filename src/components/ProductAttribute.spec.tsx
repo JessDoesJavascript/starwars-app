@@ -1,4 +1,4 @@
-import { expect, test } from "vitest";
+import { expect } from "vitest";
 import { render } from "@testing-library/react";
 import { screen } from "@testing-library/dom";
 import { ProductAttribute } from "./ProductAttribute";

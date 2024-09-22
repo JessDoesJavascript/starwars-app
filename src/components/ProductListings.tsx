@@ -1,4 +1,4 @@
-import { Button, Column, Row } from "@carbon/react";
+import { Button } from "@carbon/react";
 import styled from "styled-components";
 import { Starship } from "../domain/model";
 import Grid from "@mui/material/Grid2";
