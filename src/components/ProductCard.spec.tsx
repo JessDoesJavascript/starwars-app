@@ -59,7 +59,7 @@ describe("Product card tests", () => {
       await user.click(plus);
     });
 
-    const addToCart = screen.getByText("Add to cart");
+    const addToCart = screen.getByText("Buy");
     await user.click(addToCart);
     expect(mockAddToCart).toHaveBeenCalledWith(
       "Added 2 Millennium Falcon(s) to cart"

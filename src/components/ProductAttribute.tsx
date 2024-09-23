@@ -24,10 +24,10 @@ export function ProductAttribute(props: ProductAttributeProps) {
   if (!attribute || !attValue) return
   return (
     <>
-      <Grid size={{ xs: 6, xl: 5}}>
+      <Grid size={{ xs: 6}}>
         <Attribute>{attribute}</Attribute>
       </Grid>
-      <Grid size={{ xs: 6, xl: 7}}>
+      <Grid size={{ xs: 6}}>
         <AttValue>{attValue}</AttValue>
       </Grid>
     </>

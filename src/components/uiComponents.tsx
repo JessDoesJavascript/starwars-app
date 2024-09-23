@@ -4,7 +4,7 @@ import styled from "styled-components";
 export const StyledPaper = styled(Paper)`
   height: 100%;
   background-color: var(--clr-space);
-  padding: 20px;
+  padding: 20px 24px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -13,6 +13,7 @@ export const StyledPaper = styled(Paper)`
 
 export const PrimaryButton = styled(Button)`
   font-family: "SF Distant Galaxy Long";
+  letter-spacing: 4px; 
   color: var(--clr-yellow);
   font-size: 16px;
   padding: 8px 16px;

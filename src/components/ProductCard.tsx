@@ -56,6 +56,7 @@ const NumberDisplay = styled.div`
 
 const AddToCartButton = styled(Button)`
   font-family: "SF Distant Galaxy Long Italic";
+  letter-spacing: 1px; 
   color: var(--clr-white);
   font-size: 16px;
   padding: 8px 16px;
@@ -120,7 +121,7 @@ export function ProductCard(props: ProductCardProps) {
             +
           </PlusMinusButton>
         </Counter>
-        <AddToCartButton onClick={handleAddToCartClick}>Add to cart</AddToCartButton>
+        <AddToCartButton onClick={handleAddToCartClick}>Buy</AddToCartButton>
       </CounterWrapper>
     </StyledPaper>
   );

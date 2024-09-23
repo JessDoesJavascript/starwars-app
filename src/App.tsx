@@ -23,10 +23,6 @@ const LoadingComponent = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  p {
-    color: var(--clr-yellow);
-  }
 `;
 
 const StyledLoading = styled(CircularProgress)`
@@ -43,7 +39,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(false);
   const [starships, setStarships] = useState<Starship[]>([]);
   const [nextItemsUrl, setNextItemsUrl] = useState();
-  const [noMoreStarships, setNoMoreStarships] = useState(false)
+  const [noMoreStarships, setNoMoreStarships] = useState(false);
 
   const buttonText = isLoading ? "Discovering..." : "Discover Starships";
 
@@ -63,22 +59,22 @@ function App() {
 
   const fetchMoreStarships = (url?: string) => {
     if (!url) {
-      setNoMoreStarships(true)
-      return 
+      setNoMoreStarships(true);
+      return;
     }
     axios
-    .get(url)
-    .then(function (response) {
-      setIsFetched(true);
-      setIsLoading(false);
-      setStarships(starships.concat(response.data.results));
-      setNextItemsUrl(response.data.next);
-      console.log(response);
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
-  }
+      .get(url)
+      .then(function (response) {
+        setIsFetched(true);
+        setIsLoading(false);
+        setStarships(starships.concat(response.data.results));
+        setNextItemsUrl(response.data.next);
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  };
 
   const handleFetchStarships = () => {
     setIsLoading(true);
@@ -88,13 +84,15 @@ function App() {
   const handleSeeMoreClick = () => {
     fetchMoreStarships(nextItemsUrl);
   };
-  
+
   return (
     <AppWrapper>
       <Heading>CREATE YOUR FLEET</Heading>
-      <DiscoverButton onClick={() => handleFetchStarships()}>
-       {buttonText}
-      </DiscoverButton>
+    {!isLoading && !isFetched ? (
+        <DiscoverButton onClick={() => handleFetchStarships()}>
+          {buttonText}
+        </DiscoverButton>
+      ) : null}
       {isLoading ? (
         <LoadingComponent>
           <StyledLoading data-testid="loading" />
