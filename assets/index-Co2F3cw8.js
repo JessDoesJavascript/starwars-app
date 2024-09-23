@@ -177,16 +177,17 @@ To suppress this warning, you need to explicitly provide the \`palette.${t}Chann
   text-align: left;
   font-size: 14px;
   color: var(--clr-white);
-`;function fs(e){const{attribute:t,attValue:n}=e;if(!(!t||!n))return j.jsxs(j.Fragment,{children:[j.jsx(Kr,{size:{xs:6,xl:5},children:j.jsx(kb,{children:t})}),j.jsx(Kr,{size:{xs:6,xl:7},children:j.jsx(bb,{children:n})})]})}const q0=ke(Q0)`
+`;function fs(e){const{attribute:t,attValue:n}=e;if(!(!t||!n))return j.jsxs(j.Fragment,{children:[j.jsx(Kr,{size:{xs:6},children:j.jsx(kb,{children:t})}),j.jsx(Kr,{size:{xs:6},children:j.jsx(bb,{children:n})})]})}const q0=ke(Q0)`
   height: 100%;
   background-color: var(--clr-space);
-  padding: 20px;
+  padding: 20px 24px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 `,Rb=ke(Kf)`
   font-family: "SF Distant Galaxy Long";
+  letter-spacing: 4px; 
   color: var(--clr-yellow);
   font-size: 16px;
   padding: 8px 16px;
@@ -235,6 +236,7 @@ To suppress this warning, you need to explicitly provide the \`palette.${t}Chann
   text-align: center;
 `,Ab=ke(Kf)`
   font-family: "SF Distant Galaxy Long Italic";
+  letter-spacing: 1px; 
   color: var(--clr-white);
   font-size: 16px;
   padding: 8px 16px;
@@ -242,7 +244,7 @@ To suppress this warning, you need to explicitly provide the \`palette.${t}Chann
   flex-direction: row;
   align-items: center;
   justify-content: center;
-`;function Nb(e){const{starship:t,addToCartFn:n}=e,[r,o]=b.useState(1),i=l=>{l==="plus"&&o(r+1),l==="minus"&&r>0&&o(r-1)},s=()=>{n(`Added ${r} ${t.name}(s) to cart`)};return j.jsxs(q0,{"data-testid":"product-card",children:[j.jsx(Tb,{children:t.name}),j.jsxs(Kr,{container:!0,rowSpacing:2,columnSpacing:2,children:[j.jsx(fs,{attribute:"Model",attValue:t.model}),j.jsx(fs,{attribute:"Crew",attValue:t.crew}),j.jsx(fs,{attribute:"Hyperdrive",attValue:t.hyperdrive_rating}),j.jsx(fs,{attribute:"Cost",attValue:`${t.cost_in_credits}`})]}),j.jsxs(Ob,{children:[j.jsxs(Pb,{children:[j.jsx(lh,{"data-testid":"minus-button",onClick:()=>i("minus"),children:"-"}),j.jsx(_b,{id:"number-of-items","data-testid":"number-of-items",children:r}),j.jsx(lh,{"data-testid":"plus-button",onClick:()=>i("plus"),children:"+"})]}),j.jsx(Ab,{onClick:s,children:"Add to cart"})]})]})}const $b=ke(Cf)`
+`;function Nb(e){const{starship:t,addToCartFn:n}=e,[r,o]=b.useState(1),i=l=>{l==="plus"&&o(r+1),l==="minus"&&r>0&&o(r-1)},s=()=>{n(`Added ${r} ${t.name}(s) to cart`)};return j.jsxs(q0,{"data-testid":"product-card",children:[j.jsx(Tb,{children:t.name}),j.jsxs(Kr,{container:!0,rowSpacing:2,columnSpacing:2,children:[j.jsx(fs,{attribute:"Model",attValue:t.model}),j.jsx(fs,{attribute:"Crew",attValue:t.crew}),j.jsx(fs,{attribute:"Hyperdrive",attValue:t.hyperdrive_rating}),j.jsx(fs,{attribute:"Cost",attValue:`${t.cost_in_credits}`})]}),j.jsxs(Ob,{children:[j.jsxs(Pb,{children:[j.jsx(lh,{"data-testid":"minus-button",onClick:()=>i("minus"),children:"-"}),j.jsx(_b,{id:"number-of-items","data-testid":"number-of-items",children:r}),j.jsx(lh,{"data-testid":"plus-button",onClick:()=>i("plus"),children:"+"})]}),j.jsx(Ab,{onClick:s,children:"Buy"})]})]})}const $b=ke(Cf)`
   width: 100%;
   height: 100%;
   margin: 0;
@@ -278,13 +280,9 @@ To suppress this warning, you need to explicitly provide the \`palette.${t}Chann
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  p {
-    color: var(--clr-yellow);
-  }
 `,hT=ke(cb)`
   color: var(--clr-white);
 `,mT=ke(Rb)`
   align-self: center;
   margin-bottom: 24px;
-`;function gT(){const[e,t]=b.useState(!1),[n,r]=b.useState(!1),[o,i]=b.useState([]),[s,l]=b.useState(),[a,u]=b.useState(!1),c=n?"Discovering...":"Discover Starships",f=()=>{Se.get("https://swapi.dev/api/starships").then(function(w){t(!0),r(!1),i(w.data.results),l(w.data.next)}).catch(function(w){console.log(w)})},d=w=>{if(!w){u(!0);return}Se.get(w).then(function(E){t(!0),r(!1),i(o.concat(E.data.results)),l(E.data.next),console.log(E)}).catch(function(E){console.log(E)})},g=()=>{r(!0),f()},y=()=>{d(s)};return j.jsxs(fT,{children:[j.jsx(dT,{children:"CREATE YOUR FLEET"}),j.jsx(mT,{onClick:()=>g(),children:c}),n?j.jsx(pT,{children:j.jsx(hT,{"data-testid":"loading"})}):null,e?j.jsx(Ib,{starships:o,handleSeeMoreClick:y,noMoreStarships:a}):null]})}Lg(document.getElementById("root")).render(j.jsx(b.StrictMode,{children:j.jsx(gT,{})}));
+`;function gT(){const[e,t]=b.useState(!1),[n,r]=b.useState(!1),[o,i]=b.useState([]),[s,l]=b.useState(),[a,u]=b.useState(!1),c=n?"Discovering...":"Discover Starships",f=()=>{Se.get("https://swapi.dev/api/starships").then(function(w){t(!0),r(!1),i(w.data.results),l(w.data.next)}).catch(function(w){console.log(w)})},d=w=>{if(!w){u(!0);return}Se.get(w).then(function(E){t(!0),r(!1),i(o.concat(E.data.results)),l(E.data.next),console.log(E)}).catch(function(E){console.log(E)})},g=()=>{r(!0),f()},y=()=>{d(s)};return j.jsxs(fT,{children:[j.jsx(dT,{children:"CREATE YOUR FLEET"}),!n&&!e?j.jsx(mT,{onClick:()=>g(),children:c}):null,n?j.jsx(pT,{children:j.jsx(hT,{"data-testid":"loading"})}):null,e?j.jsx(Ib,{starships:o,handleSeeMoreClick:y,noMoreStarships:a}):null]})}Lg(document.getElementById("root")).render(j.jsx(b.StrictMode,{children:j.jsx(gT,{})}));
