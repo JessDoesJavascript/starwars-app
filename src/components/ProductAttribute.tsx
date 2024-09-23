@@ -3,15 +3,15 @@ import styled from "styled-components";
 
 const Attribute = styled.div`
   text-align: right;
-  font-size: 12px;
+  font-size: 14px;
   color: var(--clr-white);
   opacity: 0.6;
 `;
 
 const AttValue = styled.div`
   text-align: left;
+  font-size: 14px;
   color: var(--clr-white);
-  font-size: 12px;
 `;
 
 interface ProductAttributeProps {
@@ -24,10 +24,10 @@ export function ProductAttribute(props: ProductAttributeProps) {
   if (!attribute || !attValue) return
   return (
     <>
-      <Grid size={{ xs: 6, lg: 3}}>
+      <Grid size={{ xs: 6, xl: 5}}>
         <Attribute>{attribute}</Attribute>
       </Grid>
-      <Grid size={{ xs: 6, lg: 9}}>
+      <Grid size={{ xs: 6, xl: 7}}>
         <AttValue>{attValue}</AttValue>
       </Grid>
     </>

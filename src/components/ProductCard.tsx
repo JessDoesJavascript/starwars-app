@@ -10,7 +10,8 @@ import { useState } from "react";
 const Name = styled.h1`
   text-transform: capitalize;
   color: var(--clr-yellow);
-  font-size: 20px;
+  font-size: 20px; 
+  letter-spacing: 2px;
 `;
 
 const CounterWrapper = styled.div`
@@ -54,7 +55,7 @@ const NumberDisplay = styled.div`
 `;
 
 const AddToCartButton = styled(Button)`
-  font-family: "SF Distant Galaxy Long Outline Italic";
+  font-family: "SF Distant Galaxy Long Italic";
   color: var(--clr-white);
   font-size: 16px;
   padding: 8px 16px;

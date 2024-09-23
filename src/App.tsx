@@ -54,9 +54,7 @@ function App() {
         setIsFetched(true);
         setIsLoading(false);
         setStarships(response.data.results);
-        // setStarships(starships.concat(response.data.results));
         setNextItemsUrl(response.data.next);
-        console.log(response);
       })
       .catch(function (error) {
         console.log(error);
@@ -65,7 +63,6 @@ function App() {
 
   const fetchMoreStarships = (url?: string) => {
     if (!url) {
-      console.log('no more starships')
       setNoMoreStarships(true)
       return 
     }
